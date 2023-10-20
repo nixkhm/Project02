@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project 02 - To Do List</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5">To Do List Application</h1>
+      <form name="task-form" action="" method="GET">
+        <h3 class="text-center mt-3">Add a Task</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="taskTitle">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                name="taskTitle"
+                value=""
+                placeholder="Enter text here..."
+              />
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="taskPriority">Priority</label>
+              <select class="form-control" name="taskPriority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="taskStatus">Status</label>
+              <div>
+                <input name="taskStatus" type="radio" value="Pending" checked />
+                <label for="statusPending">Pending</label>
+              </div>
+              <div>
+                <input name="taskStatus" type="radio" value="Completed" />
+                <label for="statusCompleted">Completed</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <input
+              class="mt-5"
+              type="button"
+              name="submit"
+              value="Add Task"
+              onClick="addTask(this.form)"
+            />
+          </div>
+        </div>
+
+        <h3 class="text-center mt-2">Task List</h3>
+        <ul class="mt-2" id="task-list"></ul>
+      </form>
+    </div>
+  </body>
+</html>
